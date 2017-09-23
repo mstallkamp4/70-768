@@ -6,10 +6,59 @@
     <Name>WorldWideImporters.database</Name>
     <FullPath>WorldWideImporters.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Wide World Importers DW.cube</Name>
+      <FullPath>Wide World Importers DW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Wide World Importers DW.partitions</Name>
+          <FullPath>Wide World Importers DW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>City.dim</Name>
+      <FullPath>City.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Invoice.dim</Name>
+      <FullPath>Invoice.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Wide World Importers DW.ds</Name>
+      <FullPath>Wide World Importers DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Wide World Importers DW.dsv</Name>
+      <FullPath>Wide World Importers DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=WideWorldImportersDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>

@@ -28,7 +28,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5036" scrolltop="-1" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="90" x="24723" y="17463" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5036" scrolltop="-1" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="90" x="25760" y="12213" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                   </font>
@@ -434,30 +434,27 @@
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
-            <xs:element name="Dimension_Employee" msprop:design-time-name="6ddcf579-b403-42b6-96d1-f49dfc1ccda4" msprop:FriendlyName="Employee" msprop:DbSchemaName="Dimension" msprop:DbTableName="Employee" msprop:TableType="Table">
+            <xs:element name="Dimension_Employee" msprop:design-time-name="6ddcf579-b403-42b6-96d1-f49dfc1ccda4" msprop:IsLogical="True" msprop:FriendlyName="Employee" msprop:DbTableName="Employee" msprop:TableType="View" msprop:QueryDefinition="SELECT [Employee Key], CASE WHEN [WWI Employee ID] &gt;= 3 AND [WWI Employee ID] &lt;= 11 THEN 194 WHEN [WWI Employee ID] &gt;= 12 AND [WWI Employee ID] &lt;= 15 THEN 203 WHEN [WWI Employee ID] &gt;= 16 AND &#xD;&#xA;                  [WWI Employee ID] &lt;= 19 THEN 208 WHEN [WWI Employee ID] = 20 THEN 210 ELSE NULL END AS [Manager Key], [WWI Employee ID], Employee, [Preferred Name], [Is Salesperson]&#xD;&#xA;FROM     Dimension.Employee" msprop:QueryBuilder="SpecificQueryBuilder">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:element name="Employee_x0020_Key" msprop:design-time-name="f4c7e113-9b15-4769-af16-6684d652e96a" msprop:DbColumnName="Employee Key" msprop:FriendlyName="Employee Key" type="xs:int" />
-                  <xs:element name="WWI_x0020_Employee_x0020_ID" msprop:design-time-name="634971e6-4ff0-44e0-9f46-50d1a40d7db4" msprop:DbColumnName="WWI Employee ID" msprop:FriendlyName="WWI Employee ID" type="xs:int" />
-                  <xs:element name="Employee" msprop:design-time-name="eae6452a-67c1-48c9-81fc-cce1f22313a4" msprop:DbColumnName="Employee" msprop:FriendlyName="Employee">
+                  <xs:element name="Employee_x0020_Key" msprop:design-time-name="f4c7e113-9b15-4769-af16-6684d652e96a" msprop:DbColumnName="Employee Key" msprop:FriendlyName="Employee Key" type="xs:int" minOccurs="0" />
+                  <xs:element name="WWI_x0020_Employee_x0020_ID" msprop:design-time-name="634971e6-4ff0-44e0-9f46-50d1a40d7db4" msprop:DbColumnName="WWI Employee ID" msprop:FriendlyName="WWI Employee ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="Employee" msprop:design-time-name="eae6452a-67c1-48c9-81fc-cce1f22313a4" msprop:DbColumnName="Employee" msprop:FriendlyName="Employee" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Preferred_x0020_Name" msprop:design-time-name="5353b6f5-f928-4f83-9ae9-c26c10ca3f83" msprop:DbColumnName="Preferred Name" msprop:FriendlyName="Preferred Name">
+                  <xs:element name="Preferred_x0020_Name" msprop:design-time-name="5353b6f5-f928-4f83-9ae9-c26c10ca3f83" msprop:DbColumnName="Preferred Name" msprop:FriendlyName="Preferred Name" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Is_x0020_Salesperson" msprop:design-time-name="b60794f9-fda1-4ae0-baf1-0564a1aa5f75" msprop:DbColumnName="Is Salesperson" msprop:FriendlyName="Is Salesperson" type="xs:boolean" />
-                  <xs:element name="Photo" msprop:design-time-name="6b26922b-f05a-454d-a4df-c9791a40d86a" msprop:DataSize="0" msprop:DbColumnName="Photo" msprop:FriendlyName="Photo" type="xs:base64Binary" minOccurs="0" />
-                  <xs:element name="Valid_x0020_From" msprop:design-time-name="81e3de5e-02f4-4b61-9839-bafa583e2cb1" msprop:DbColumnName="Valid From" msprop:FriendlyName="Valid From" type="xs:dateTime" />
-                  <xs:element name="Valid_x0020_To" msprop:design-time-name="4770e50e-c020-4291-989c-e83ba0c6d3cc" msprop:DbColumnName="Valid To" msprop:FriendlyName="Valid To" type="xs:dateTime" />
-                  <xs:element name="Lineage_x0020_Key" msprop:design-time-name="b28440e6-1ace-43da-a513-6374e9dcf564" msprop:DbColumnName="Lineage Key" msprop:FriendlyName="Lineage Key" type="xs:int" />
+                  <xs:element name="Is_x0020_Salesperson" msprop:design-time-name="b60794f9-fda1-4ae0-baf1-0564a1aa5f75" msprop:DbColumnName="Is Salesperson" msprop:FriendlyName="Is Salesperson" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="Manager_x0020_Key" msprop:DbColumnName="Manager Key" msprop:design-time-name="2a045108-f627-4277-95eb-dde4c854fc52" type="xs:int" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -565,7 +562,7 @@
                   <xs:element name="Total_x0020_Dry_x0020_Items" msprop:design-time-name="fe4a1dc7-718f-4659-9393-e4a87d23d266" msprop:DbColumnName="Total Dry Items" msprop:FriendlyName="Total Dry Items" type="xs:int" />
                   <xs:element name="Total_x0020_Chiller_x0020_Items" msprop:design-time-name="9d759915-c361-432d-a6aa-e9782baa1e97" msprop:DbColumnName="Total Chiller Items" msprop:FriendlyName="Total Chiller Items" type="xs:int" />
                   <xs:element name="Lineage_x0020_Key" msprop:design-time-name="8a592bc2-9547-4668-bded-1e749b873179" msprop:DbColumnName="Lineage Key" msprop:FriendlyName="Lineage Key" type="xs:int" />
-                  <xs:element name="Test_x0020_Calc" msdata:ReadOnly="true" msprop:Description="" msprop:ComputedColumnExpression="'1' + Description" msprop:IsLogical="True" msprop:design-time-name="83a31bd8-2118-498f-85ea-347b98247db0" msprop:DbColumnName="Test Calc">
+                  <xs:element name="Test_x0020_Calc" msdata:ReadOnly="true" msprop:design-time-name="83a31bd8-2118-498f-85ea-347b98247db0" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="Test Calc" msprop:ComputedColumnExpression="'1' + Description">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="101" />
@@ -589,7 +586,7 @@
           <xs:selector xpath=".//Dimension_Date" />
           <xs:field xpath="Date" />
         </xs:unique>
-        <xs:unique name="Dimension_Employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:unique name="Dimension_Employee_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
           <xs:selector xpath=".//Dimension_Employee" />
           <xs:field xpath="Employee_x0020_Key" />
         </xs:unique>
@@ -614,10 +611,6 @@
           <xs:selector xpath=".//Fact_Sale" />
           <xs:field xpath="Customer_x0020_Key" />
         </xs:keyref>
-        <xs:keyref name="FK_Fact_Sale_Salesperson_Key_Dimension_Employee" refer="Dimension_Employee_Constraint1">
-          <xs:selector xpath=".//Fact_Sale" />
-          <xs:field xpath="Salesperson_x0020_Key" />
-        </xs:keyref>
         <xs:keyref name="FK_Fact_Sale_Invoice_Date_Key_Dimension_Date" refer="Dimension_Date_Constraint1">
           <xs:selector xpath=".//Fact_Sale" />
           <xs:field xpath="Invoice_x0020_Date_x0020_Key" />
@@ -631,6 +624,11 @@
           <xs:field xpath="Delivery_x0020_Date_x0020_Key" />
         </xs:keyref>
       </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FK_Fact_Sale_Salesperson_Key_Dimension_Employee" msdata:parent="Dimension_Employee" msdata:child="Fact_Sale" msdata:parentkey="Employee_x0020_Key" msdata:childkey="Salesperson_x0020_Key" msprop:IsLogical="True" />
+        </xs:appinfo>
+      </xs:annotation>
     </xs:schema>
     <Wide_x0020_World_x0020_Importers_x0020_DW xmlns="" />
   </Schema>
