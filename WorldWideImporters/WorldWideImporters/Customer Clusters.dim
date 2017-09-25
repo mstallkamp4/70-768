@@ -1,0 +1,168 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6ebe1ea-f9f6-45ad-98d5-1ea1febb8c5e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer Clusters</ID>
+  <Name>Customer Clusters</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5de1e8ae-8f28-4658-8e20-07c9dd3533df">
+    <DataSourceViewID>Customer Clusters_DMDSV</DataSourceViewID>
+  </Source>
+  <MiningModelID>Customer</MiningModelID>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="f56ea84a-03d6-41c0-89d5-74a3c160e3c4">
+      <ID>ATTRIBUTE_NAME</ID>
+      <Name>ATTRIBUTE_NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c2e823c8-baae-4522-a3d8-9e5e1a423436">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79324bf8-059e-46f3-b6f8-29317b996e2f">
+            <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+            <ColumnID>ATTRIBUTE_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b9e758a1-97b7-468c-bd2d-05521b035e76">
+      <ID>PARENT_UNIQUE_NAME</ID>
+      <Name>MiningDimensionContentNodes</Name>
+      <Usage>Parent</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f0cf58f-1d6e-412e-bd16-d7a807287b86">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b88d73e0-96f4-4a92-9a9f-ed9ae0f5d800">
+            <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+            <ColumnID>PARENT_UNIQUE_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <MembersWithData>NonLeafDataHidden</MembersWithData>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="35c4376c-ca63-4b1b-aad5-d48d4ecc7cac">
+      <ID>NODE_RULE</ID>
+      <Name>NODE_RULE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fd078013-614b-4960-94e7-ff239b42e346">
+          <DataType>WChar</DataType>
+          <DataSize>8192</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e7afe496-b55d-4eef-aad8-5a39f1d19ce5">
+            <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+            <ColumnID>NODE_RULE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e982a0c1-b8c5-427e-a3a7-2f4a62c2ed18">
+      <ID>NODE_SUPPORT</ID>
+      <Name>NODE_SUPPORT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25d6ec57-517b-45c8-8e5a-34eb6cb9577a">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="47c09872-beb5-4bc2-8c42-7e0002c62408">
+            <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+            <ColumnID>NODE_SUPPORT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c3ae699c-dbdb-479b-9676-c7dffe2a2c56">
+      <ID>NODE_UNIQUE_NAME</ID>
+      <Name>NODE_UNIQUE_NAME</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="937833ae-c77b-4fbc-8ddf-6d366299c581">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d9303be-8299-4f3a-85ec-0fa9005dee2a">
+            <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+            <ColumnID>NODE_UNIQUE_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3383aadd-fd33-4611-abfc-7f3fd215ecd2">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b6969deb-68d4-4f13-86c1-d83df79d6d86">
+          <TableID>DIMENSION_CONTENT_ROWSET</TableID>
+          <ColumnID>NODE_CAPTION</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5bc21da6-e8f6-4d93-818b-7787256f6a9d">
+          <AttributeID>PARENT_UNIQUE_NAME</AttributeID>
+          <Name>MiningDimensionContentNodes</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f1dcc03-b815-4ae3-b695-14683e3f16be">
+          <AttributeID>ATTRIBUTE_NAME</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>ATTRIBUTE_NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d4885b98-a59c-4824-a4f3-e96fdb97b524">
+          <AttributeID>NODE_RULE</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>NODE_RULE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="83a268a2-b1c0-4d17-aa7a-d79b23dd77e4">
+          <AttributeID>NODE_SUPPORT</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>NODE_SUPPORT</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

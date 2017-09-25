@@ -17,7 +17,27 @@
       <Dimension>
         <ID>Invoice</ID>
       </Dimension>
+      <Dimension>
+        <ID>Employee</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Customer</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Customer Clusters</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Stock Item</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Date</ID>
+      </Dimension>
     </Dimensions>
+    <MiningStructures>
+      <MiningStructure>
+        <ID>Customer</ID>
+      </MiningStructure>
+    </MiningStructures>
     <Cubes>
       <Cube>
         <ID>Wide World Importers DW</ID>
@@ -29,6 +49,30 @@
                 <ID>Sale</ID>
               </Partition>
             </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Sale 1</ID>
+            <Partitions>
+              <Partition>
+                <ID>Sale</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Stock Holding</ID>
+            <Partitions>
+              <Partition>
+                <ID>Stock Holding</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Wide World Importers DW_DM</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Sale</ID>
           </MeasureGroup>
         </MeasureGroups>
       </Cube>

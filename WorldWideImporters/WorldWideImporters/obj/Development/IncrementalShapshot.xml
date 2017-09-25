@@ -8,7 +8,7 @@
     <TransactionalDeployment>true</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -26,9 +26,16 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>oJaBwAmJsgA+iOYhKAqUFA79o1U=9/20/2017 5:16:40 PM9/20/2017 5:05:49 PM</TimeStamp>
+        <TimeStamp>LdGQsAERXsHCO4zDGUkHvXHYfsg=9/24/2017 8:38:11 PM9/20/2017 5:05:49 PM</TimeStamp>
         <ID>
           <String>Wide World Importers DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>cfD1k9MK4RggYtd/oqdVE/hn9zA=9/24/2017 5:48:51 PM9/24/2017 5:48:50 PM</TimeStamp>
+        <ID>
+          <String>Customer Clusters_DMDSV</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
@@ -46,10 +53,59 @@
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mo9UYOPqkOtJ2+mMnaQxGi5rpZk=9/24/2017 5:42:09 PM9/22/2017 10:55:00 AM</TimeStamp>
+        <ID>
+          <String>Employee</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PNjYXMg6kV5fh1MSKZ5/iLJj5Cs=9/24/2017 5:40:44 PM9/24/2017 5:33:00 PM</TimeStamp>
+        <ID>
+          <String>Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>R9xEsSSV0Mr/sHlPR+DYsw6fcwo=9/24/2017 5:48:51 PM9/24/2017 5:48:50 PM</TimeStamp>
+        <ID>
+          <String>Customer Clusters</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>jB/9iYu/fAAP+5XDd6wFKFbaHfc=9/24/2017 6:38:51 PM9/24/2017 6:04:09 PM</TimeStamp>
+        <ID>
+          <String>Stock Item</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PakzrY1TKPaGfyiK4iShzNOkbf4=9/24/2017 8:43:47 PM9/24/2017 8:43:46 PM</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>XXiTpH/X4bXtjGYKFZjOBz7GHPs=9/22/2017 10:34:46 AM9/21/2017 2:40:41 PMla3YssH23mCy/+wZsIW25caKmI4=9/21/2017 2:40:41 PM9/21/2017 2:40:41 PM</TimeStamp>
+        <TimeStamp>LFfiGcX/y0S7r0bQf06CeuULndM=9/24/2017 8:50:15 PM9/21/2017 2:40:41 PMEHVsgl2a1DVNqMwLqVCm59BC1/Q=9/24/2017 8:38:11 PM9/21/2017 2:40:41 PM</TimeStamp>
         <ID>
           <String>Wide World Importers DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>SkK+BOPsLisay4eU3KpqL2zahJo=9/24/2017 8:43:47 PM9/24/2017 5:48:51 PMH5rdxcdixo68OlmSumKYLqBI3qM=9/24/2017 5:48:52 PM9/24/2017 5:48:51 PM</TimeStamp>
+        <ID>
+          <String>Wide World Importers DW_DM</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>DWXfRUX11GVjfMskMqzs6d6T9WA=9/24/2017 5:48:50 PM9/24/2017 5:48:50 PM</TimeStamp>
+        <ID>
+          <String>Customer</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
@@ -64,5 +120,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2017-09-22T14:34:47.026667Z</LastDeployed>
+  <LastDeployed>2017-09-25T00:50:16.85Z</LastDeployed>
 </DeploymentSnapshot>

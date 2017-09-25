@@ -17,6 +17,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Wide World Importers DW_DM.cube</Name>
+      <FullPath>Wide World Importers DW_DM.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Wide World Importers DW_DM.partitions</Name>
+          <FullPath>Wide World Importers DW_DM.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -26,6 +36,26 @@
     <ProjectItem>
       <Name>Invoice.dim</Name>
       <FullPath>Invoice.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee.dim</Name>
+      <FullPath>Employee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer Clusters.dim</Name>
+      <FullPath>Customer Clusters.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Stock Item.dim</Name>
+      <FullPath>Stock Item.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -39,7 +69,17 @@
       <Name>Wide World Importers DW.dsv</Name>
       <FullPath>Wide World Importers DW.dsv</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Customer Clusters_DMDSV.dsv</Name>
+      <FullPath>Customer Clusters_DMDSV.dsv</FullPath>
+    </ProjectItem>
   </DataSourceViews>
+  <MiningModels>
+    <ProjectItem>
+      <Name>Customer.dmm</Name>
+      <FullPath>Customer.dmm</FullPath>
+    </ProjectItem>
+  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
